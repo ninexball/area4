@@ -138,7 +138,6 @@ def _reduce_to_unit(divider: str) -> str:
     for unit_size in range(1, len(divider) // 2 + 1):
         length = len(divider)
         unit = divider[:unit_size]
-        remainder = length % unit_size
 
         # ignores mismatches in final characters
         if unit * (length // unit_size) == divider[:unit_size * (length // unit_size)]:
